@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Projects</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Ralph
+                        Toon - Robotics Portfolio</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutMe.html">About Me</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>Hexapod For Education</h1>
+                <h2>Hexapod platform created as a basis for legged robotics projects</h2>
+
+                <!-- Image Board -->
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <div class="col-4"><span class="image fit"><img src="images/Hexapod/Tile_image.jpg"
+                                    alt="" /></span></div>
+                        <div class="col-8"><span class="image fit"><img src="images/Hexapod/20181207_135437.jpg"
+                                    alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/Hexapod/Walking_gif.gif"
+                                    alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/Hexapod/PCB layout.png"
+                                    alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/Hexapod/20190415_153927.jpg"
+                                    alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/Hexapod/Picture2.png"
+                                    alt="" /></span></div>
+                        <div class="col-7"><span class="image fit"><img src="images/Hexapod/Leg parameters.png"
+                                    alt="" /></span></div>
+                    </div>
+                </div>
+
+                <!-- Project Details -->
+                <h4>Objectives:</h4>
+                <p>
+                    For my BEng final project, I undertook the task of enhancing an existing hexapod robot frame by
+                    designing the necessary electronics and software for precise movement control. The objective was to
+                    create a versatile hexapod that could be utilized in advanced legged robot research projects. To
+                    achieve this, a well-documented API was developed, enabling users with limited knowledge of hexapod
+                    kinematics and dynamics to control the frame through basic functions.
+                </p>
+
+                <h4>Technical:</h4>
+                <p>
+                    The project comprised two main components: electronics design and hexapod controller programming.
+                    The electronics design phase took precedence, involving the creation of a PCB using Autodesk EAGLE.
+                    The PCB was designed to handle power distribution, facilitate control of 32 servos via I2C, and
+                    serve as a carrier board for the LPC1768 microcontroller. Surface mount components and a
+                    double-sided layout were employed to minimize the PCB's size, ensuring it would fit within the
+                    hexapod frame. Furthermore, the inclusion of a full cover ground plane aided in heat dissipation
+                    from the power delivery components.
+                    Subsequently, the hexapod's controller was designed and programmed. Kinematic analysis of the legs
+                    yielded joint equations for each leg, ensuring accurate foot placement. Trajectory equations were
+                    then generated to determine the foot's path during a step, resulting in 3rd order polynomial
+                    trajectories. This compromise was necessary due to the limited computing power of the
+                    microcontroller; 5th order trajectories generally offer smoother movement but would pose complexity
+                    challenges during runtime on the microcontroller. MATLAB was employed to analyse the equations,
+                    allowing for visualization of the cartesian positions of the foot with varying step lengths and
+                    heights. Additionally, this analysis confirmed that the kinematic equations could successfully
+                    achieve the desired positions.
+                    The controller was programmed in C++, utilizing Arm's mbed OS to expedite development. Emphasis was
+                    placed on developing fewer features to produce well-documented and efficient code, thereby reducing
+                    any potential issues for future users of the platform. A modular design approach was adopted,
+                    featuring self-contained classes that facilitated the reusability of project modules, such as the
+                    servo controller.
+
+                </p>
+
+                <h4>Outcomes:</h4>
+                <p>
+                    The project successfully resulted in a fully functional hexapod platform capable of performing
+                    translational movement in all directions, as well as sitting and standing motions. Additionally,
+                    comprehensive documentation and a PC-based remote control application were developed, enabling
+                    effective demonstration of the project to peers and academics during project showcases.
+                </p>
+
+
+                <hr />
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <h3>Skills Involved</h3>
+                        <ul>
+                            <li>Embedded C++</li>
+                            <li>PCB design</li>
+                            <li>Legged robot kinematics</li>
+                            <li>MATLAB</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <h1></h1>
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <ul class="actions">
+                            <li><a href="Filter_Analysis.html" class="button primary">
+                                    < Prev. Project</a>
+                            </li>
+                            <li><a href="Swarm.html" class="button">Next project ></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <section>
+                    <h2>Get in touch</h2>
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/ralph-toon/"
+                                class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a>
+                        </li>
+                        <li><a href="mailto:ral519@hotmail.co.uk" class="icon solid style2 fa-envelope"><span
+                                    class="label">Email</span></a></li>
+                        <li><a href="https://github.com/ralphtoonsutd" class="icon brands style2 fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+                <ul class="copyright">
+                    <li>&copy; Ralph Toon. All rights reserved</li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
